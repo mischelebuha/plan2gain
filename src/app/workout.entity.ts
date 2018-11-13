@@ -1,11 +1,11 @@
 export class Workout {
-  public _id: string;
+  public id: string;
   public title: string;
   public exercises: Exercise[];
 }
 
 export class Exercise {
-  public _id: string;
+  public id: string;
   public title: string;
   public description: string;
   public targetMuscleGroups: TargetMuscleGroup[];
@@ -13,17 +13,17 @@ export class Exercise {
 }
 
 export class Set {
+  public id: number;
   public reps: number; // Wiederholungen in einem Satz
   public rest: number; // Satzpause in Sekunden
 }
 
-
 export class MuscleGroup {
-  public _id: string;
+  public id: string;
   public name: string; // Name der Muskelgruppe
 }
 
 export class TargetMuscleGroup extends MuscleGroup {
-  utilisation: number; // Auslastung in Prozent
+  public utilisation: number; // Auslastung in Prozent
 }
 

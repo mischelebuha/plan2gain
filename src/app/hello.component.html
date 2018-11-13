@@ -1,3 +1,23 @@
+Workouts:
 <div *ngFor="let workout of workouts">
-    <button mat-raised-button>{{workout.title}}</button>
+    <div>{{workout.title}}</div>
+    <div *ngFor="let exercise of workout.exercises">
+      <div>{{exercise.title}}</div>
+      <div *ngFor="let targetMuscleGroup of exercise.targetMuscleGroups">
+          <div>{{targetMuscleGroup.name}}: {{targetMuscleGroup.utilisation}}%</div>
+      </div>
+    </div>
 </div>
+
+<table mat-table [dataSource]=workouts>
+    <ng-container matColumnDef="title">
+        <mat-header-cell *matHeaderCellDef> Workoutname </mat-header-cell>
+        <mat-cell *matCellDef="let element"> {{element.title}} </mat-cell>
+    </ng-container>
+    <ng-container matColumnDef="id">
+          <mat-header-cell *matHeaderCellDef> ID: </mat-header-cell>
+          <mat-cell *matCellDef="let element"> {{element.id}} </mat-cell>
+        </ng-container>
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+  </table>

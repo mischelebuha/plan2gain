@@ -1,12 +1,57 @@
 
 [
   {
-    "title": "test1"
+    "id": "1",
+    "title": "Push A",
+    "exercises": [
+      {
+        "id": "5",
+        "title": "Bankdrücken",
+        "description": "Drück weg die Scheiße",
+        "targetMuscleGroups" : [
+          {
+            "id": 1,
+            "name": "Chest",
+            "utilisation": "100"
+          },
+          {
+            "id": 2,
+            "name": "Schoulder",
+            "utilisation": "33"
+          }
+        ],
+        "sets": [
+          {
+            "reps": "10",
+            "rest": "120"
+          },
+          {
+            "reps": "10",
+            "rest": "120"
+          },
+          {
+            "reps": "10",
+            "rest": "120"
+          },
+          {
+            "reps": "10",
+            "rest": "120"
+          }
+
+        ]
+      }
+    ]
   },
   {
-    "title": "test2"
+    "id": "2",
+    "title": "Pull A"
   },
   {
-    "title": "test3"
+    "id": "3",
+    "title": "Push B"
+  },
+  {
+    "id": "4",
+    "title": "Pull B"
   }
 ]
